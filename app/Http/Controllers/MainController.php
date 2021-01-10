@@ -28,11 +28,5 @@ class MainController extends Controller
         return view('category', compact('category'));
     }
 
-    public function basket() {
-        return view('basket');
-    }
 
-    public function basketPlace() {
-        return view('order');
-    }
 }
