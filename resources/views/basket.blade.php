@@ -1,10 +1,9 @@
-@extends('master')
+@extends('layouts.master')
 
 @section('title', 'Корзина')
 
 
 @section('content')
-    <div class="starter-template">
         <h1>Корзина</h1>
         <p>Оформление заказа</p>
         <div class="panel">
@@ -28,8 +27,7 @@
                             </a>
                         </td>
                         <td><span class="badge">{{$product->pivot->count}}</span>
-                            <div class="btn-group">
-
+                            <div class="btn-group form-inline">
                                 <form action="{{ route('basket-remove', $product) }}" method="POST">
                                     <button type="submit" class="btn btn-danger"
                                             href=""><span
@@ -48,8 +46,6 @@
                         <td>{{ $product->getPriceForCount() }} руб.</td>
                     </tr>
                 @endforeach
-
-
                 <tr>
                     <td colspan="3">Общая стоимость:</td>
                     <td>{{$order->getFullPrice()}} руб.</td>
@@ -58,8 +54,7 @@
             </table>
             <br>
             <div class="btn-group pull-right" role="group">
-                <a type="button" class="btn btn-success" href="http://internet-shop.tmweb.ru/basket/place">Оформить заказ</a>
+                <a type="button" class="btn btn-success" href="{{route('basket-place')}}">Оформить заказ</a>
             </div>
         </div>
-    </div>
 @endsection

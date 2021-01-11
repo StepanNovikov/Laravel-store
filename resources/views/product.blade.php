@@ -1,11 +1,11 @@
-@extends('master')
+@extends('layouts.master')
 
 @section('title', 'Товар')
 
 
 @section('content')
-    <div class="starter-template">
-                            <h1>iPhone X 64GB</h1>
+
+    <h1>iPhone X 64GB</h1>
     <h2>{{$product}}</h2>
     <p>Цена: <b>71990 ₽</b></p>
     <img src="http://internet-shop.tmweb.ru/storage/products/iphone_x.jpg">
@@ -15,5 +15,4 @@
             <button type="submit" class="btn btn-success" role="button">Добавить в корзину</button>
 
             <input type="hidden" name="_token" value="R44YfblgUmPv7nLoJwEpJtvu87tZ3M9q7jkb9nkc">        </form>
-        </div>
 @endsection
